@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link  to="/Graphs">Premier League Ratings</router-link>
-     
+      
     </div>
     <router-view/>
   </div>
@@ -27,6 +27,9 @@ export default {
 }
 </script>
 <style>
+h1{
+  
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
