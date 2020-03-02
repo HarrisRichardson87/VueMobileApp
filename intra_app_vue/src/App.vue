@@ -2,12 +2,30 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">Premier League Ratings</router-link>
+      <router-link  to="/Graphs">Premier League Ratings</router-link>
+     
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+    components:{
+     
+    },
+    data: function () {
+      return {
+       
+          search:''
+      }
+  },
+   methods:{
+    test(datosFiltro){
+      this.search = datosFiltro;
+    }}
 
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

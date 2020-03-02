@@ -35,10 +35,13 @@
 <script>
   import axios from 'axios'
   export default {
-    name: 'About',
+    name: 'Table',
     props: {
       msg: String,
-      // search:String
+       searchData:{
+            type:String
+        }
+      
 
     },
     data: function () {
@@ -53,8 +56,12 @@
     },
     methods: {
       sender(e){
+        this.search = e.target.innerHTML
         alert(e.target.innerHTML)
-        window.location.href = '/'
+        this.$emit('filterToFather', this.search)
+        this.props.searchData = e.target.innerHTML
+        this.search = e.target.innerHTML
+    
       },
       toggleNavbar() {
         this.navbarOpen = !this.navbarOpen;

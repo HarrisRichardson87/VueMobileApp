@@ -6,8 +6,7 @@
    
     <div class="table-responsive" v-if="loaded && data.length">
         
-          
-     <h1><span>{{ searchData }}</span></h1>
+    <h1><span>{{ searchData }}</span></h1>
       <table id="table" class="table table-striped table-bordered table-sm table-hover">
         <thead>
         
