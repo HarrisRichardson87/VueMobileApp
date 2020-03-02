@@ -1,38 +1,38 @@
 <template>
   <div class="home">
     <img id="main" alt="Vue logo" height="100" src="../assets/logo.png">
-    <Search msg="Welcome to Your Vue.js App"
-    v-on:filterToFather="test($event)"/>
-    <Player v-bind:searchData = 'search'/>
+    <Search msg="Welcome to Your Vue.js App" v-on:filterToFather="test($event)" />
+    <Player v-bind:searchData='search' />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Search from '@/components/Search.vue'
-import Player from '@/components/Player.vue'
-export default {
-  name: 'Home',
-  components: {
-    Search,Player
-  },
-  data: function () {
+  // @ is an alias to /src
+  import Search from '@/components/Search.vue'
+  import Player from '@/components/Player.vue'
+  export default {
+    name: 'Home',
+    components: {
+      Search,
+      Player
+    },
+    data: function () {
       return {
-       
-          search:''
+
+        search: ''
       }
-  },
-   methods:{
-    test(datosFiltro){
-      this.search = datosFiltro;
-    }}
+    },
+    methods: {
+      test(datosFiltro) {
+        this.search = datosFiltro;
+      }
+    }
 
-}
+  }
 </script>
-<style >
-#main{
+<style>
+  #main {
 
-  padding-bottom: 10px
-
-}
+    padding-bottom: 10px
+  }
 </style>
