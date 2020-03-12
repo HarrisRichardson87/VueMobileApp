@@ -147,7 +147,7 @@
     
     },
     mounted() {
-      axios.get('http://localhost:5000/leagues/by/Premier/allseasons/')
+      axios.get('https://nameless-refuge-85592.herokuapp.com/leagues/by/Premier/allseasons/')
         .then((response) => {
 
           return response

@@ -199,7 +199,7 @@
 
     },
     mounted() {
-      axios.get('http://localhost:5000/leagues/by/Premier/2018/')
+      axios.get('https://nameless-refuge-85592.herokuapp.com/leagues/by/Premier/2018/')
         .then((response) => {
 
           return response
@@ -220,7 +220,7 @@
           this.suggestions = this.dataBox
           this.loaded = true
 
-          axios.get('http://localhost:5000/leagues/by/Premier/allseasons/')
+          axios.get('https://nameless-refuge-85592.herokuapp.com/leagues/by/Premier/allseasons/')
             .then((json) => {
 
               this.clicker = json
