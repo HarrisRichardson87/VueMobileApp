@@ -57,8 +57,8 @@
           </tbody>
         </table>
 
-        <h1 v-on:click="back">Premier League Ratings</h1>
-        <img id="main" alt="Vue logo" height="100" src="../assets/logo.png">
+        <h1 v-on:click="back">Back to Ratings Table</h1>
+        <img v-on:click="back" id="main" alt="Vue logo" height="100" src="../assets/logo.png">
 
       </div>
 

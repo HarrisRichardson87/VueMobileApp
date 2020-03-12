@@ -4,9 +4,10 @@
       <img class="blink_me" src="../assets/logo.png" height="150">
     </div>
    
-    <div class="table-responsive" v-if="loaded && data.length">
-        
-    <h1><span>{{ searchData }}</span></h1>
+    <div class="table-responsive-card" v-if="loaded && data.length">
+    
+    <h1 class="card-header"><span>{{ searchData }}</span></h1>
+    
       <table id="table" class="table table-striped table-bordered table-sm table-hover">
         <thead>
         
@@ -60,7 +61,7 @@
         this.navbarOpen = !this.navbarOpen;
       },
       submit(e) {
-        alert('Submit')
+      
         e.preventDefault()
         this.$emit('filterToFather', this.search)
       },
