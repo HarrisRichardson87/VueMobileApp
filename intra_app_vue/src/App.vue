@@ -1,53 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link  to="/Graphs">Premier League Ratings</router-link>
-      
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <navbar ></navbar>
+   
+     <main class="py-4">
+      <router-view>      <router-link  to="/Graphs" class='logged-in'>Premier League Ratings</router-link>
+</router-view>
+    </main>
+  </v-app>
 </template>
-<script>
-export default {
-    components:{
-     
-    },
-    data: function () {
-      return {
-       
-          search:''
-      }
-  },
-   methods:{
-    test(datosFiltro){
-      this.search = datosFiltro;
-    }}
 
-}
+<script>
+// import HelloWorld from './components/HelloWorld';
+// import Search from './components/Search'
+import navbar from "./components/Navbar";
+export default {
+  name: 'App',
+
+  components: {
+    navbar
+    // HelloWorld,Search
+    // Search
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-<style>
-h1{
-  
-}
+
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+   font-family: 'Lobster', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
+table{
+  font-family: 'Roboto', sans-serif;
 
-#nav {
-  padding: 30px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

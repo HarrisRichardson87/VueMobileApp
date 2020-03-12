@@ -1,15 +1,16 @@
 <template>
-  <div class="hello">
-    <form v-on:submit="submit">
-      <input v-model="search" v-on:change='suggester' class="form-control mr-sm-2" @keyup="suggester" />
 
-      <ul>
-        <option v-on:click='setter' v-for="suggest in suggestions" v-bind:key="suggest">{{suggest}}</option>
-      </ul>
-      <a to='/search'><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></a>
+  <form v-on:submit="submit" class="col">
+    <input v-model="search" v-on:change='suggester' class="form-control mr-sm-1" @keyup="suggester" />
 
-    </form>
-  </div>
+    <ul class="list-group">
+      <option class="list-group-item" v-on:click='setter' v-for="suggest in suggestions" v-bind:key="suggest">{{suggest}}</option>
+      
+      <a to='/search'><button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button></a>
+    </ul>
+
+  </form>
+
 </template>
 
 <script>
@@ -38,9 +39,11 @@
 
       },
       setter(e) {
+        e.preventDefault()
         this.search = e.target.value
         this.suggestions = null;
         this.$emit('filterToFather', e.target.value);
+        this.search = ''
       },
       suggester(e) {
         e.preventDefault()
@@ -83,12 +86,14 @@
     padding: 0;
   }
 
-  li {
-    display: inline-block;
+  option :hover {
+    background-color:grey;
     margin: 0 10px;
   }
 
   a {
     color: #42b983;
   }
+
+
 </style>
